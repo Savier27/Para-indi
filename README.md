@@ -13,6 +13,7 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
     }
+
     .mensaje {
       background-color: rgba(255, 255, 255, 0.85);
       padding: 40px;
@@ -22,15 +23,18 @@
       margin-top: 60px;
       animation: entrar 1.5s ease;
     }
+
     h1 {
       color: #8a2be2;
       font-size: 1.8rem;
       margin: 0;
     }
+
     .gif {
       margin-top: 30px;
       animation: aparecer 2s ease;
     }
+
     .contenedor-video {
       position: fixed;
       bottom: 10px;
@@ -46,20 +50,24 @@
       overflow: hidden;
       cursor: pointer;
     }
+
     .contenedor-video iframe {
       width: 100%;
       height: 100%;
-      pointer-events: auto;
+      pointer-events: auto; /* ahora permite interacción */
     }
+
     .contenedor-video.activo {
       transform: rotate(0deg) scale(1.05);
       opacity: 1;
       box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
     }
+
     @keyframes entrar {
       from { transform: translateY(30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
     @keyframes aparecer {
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
@@ -69,9 +77,9 @@
 <body>
   <div class="contenedor-video" onclick="this.classList.add('activo')">
     <iframe
-      src="https://www.youtube.com/embed/yl3GDni9WCQ?autoplay=1&loop=1&playlist=yl3GDni9WCQ"
+      src="https://www.youtube.com/embed/yl3GDni9WCQ?autoplay=1&mute=1&loop=1&playlist=yl3GDni9WCQ"
       frameborder="0"
-      allow="autoplay"
+      allow="autoplay; encrypted-media"
       allowfullscreen>
     </iframe>
   </div>
