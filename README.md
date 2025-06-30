@@ -49,7 +49,7 @@
     .contenedor-video iframe {
       width: 100%;
       height: 100%;
-      pointer-events: none;
+      pointer-events: auto;
     }
     .contenedor-video.activo {
       transform: rotate(0deg) scale(1.05);
